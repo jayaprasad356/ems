@@ -44,7 +44,7 @@
     <meta property="og:title" content="{{ $metatitle }}">
     <meta property="og:description" content="{{ $metadesc }}">
     <meta property="og:image"
-        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'hrmgo.png' }}">
+        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'EMS.png' }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -52,7 +52,7 @@
     <meta property="twitter:title" content="{{ $metatitle }}">
     <meta property="twitter:description" content="{{ $metadesc }}">
     <meta property="twitter:image"
-        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'hrmgo.png' }}">
+        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'EMS.png' }}">
 
     <!-- Favicon icon -->
     {{-- <link rel="icon" href="{{ $sup_logo.'/'. $adminSettings['company_favicon'] }}" type="image/x-icon" /> --}}
@@ -113,7 +113,7 @@
             <nav class="navbar navbar-expand-md  default top-nav-collapse">
                 <div class="header-left">
                     <a class="navbar-brand bg-transparent" href="#">
-                        <img src="{{ $logo . '/' . $settings['site_logo'] . '?' . time() }}" alt="logo">
+                    <img src="{{ $sup_logo . '/' . $settings['4_light_logo'] . '?' . time() }}" alt="logo" style="width: 50px; height: auto;">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -263,7 +263,7 @@
             <div class="ftr-col cmp-detail">
                 <div class="footer-logo mb-3">
                     <a href="#">
-                        <img src="{{ $logo . '/' . $settings['site_logo'] . '?' . time() }}" alt="logo">
+                    <img src="{{ $sup_logo . '/' . $settings['4_light_logo'] . '?' . time() }}" alt="logo" style="width: 50px; height: auto;">
                     </a>
                 </div>
                 <p>
@@ -324,7 +324,7 @@
     <div class="border-top border-dark text-center p-2">
 
         &copy;{{ date(' Y') }}
-        {{ App\Models\Utility::getValByName('footer_text') ? App\Models\Utility::getValByName('footer_text') : config('app.name', 'HRMGo SaaS') }}
+        {{ App\Models\Utility::getValByName('footer_text') ? App\Models\Utility::getValByName('footer_text') : config('app.name', 'EMS SaaS') }}
 
 
     </div>

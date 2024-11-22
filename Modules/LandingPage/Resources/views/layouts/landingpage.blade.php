@@ -44,7 +44,7 @@
     <meta property="og:title" content="{{ $metatitle }}">
     <meta property="og:description" content="{{ $metadesc }}">
     <meta property="og:image"
-        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'hrmgo.png' }}">
+        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'EMS.png' }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -52,7 +52,7 @@
     <meta property="twitter:title" content="{{ $metatitle }}">
     <meta property="twitter:description" content="{{ $metadesc }}">
     <meta property="twitter:image"
-        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'hrmgo.png' }}">
+        content="{{ isset($meta_logo) && !empty(asset('storage/uploads/meta/' . $meta_logo)) ? asset('storage/uploads/meta/' . $meta_logo) : 'EMS.png' }}">
 
     <!-- Favicon icon -->
     {{-- <link rel="icon" href="{{ $sup_logo.'/'. $adminSettings['company_favicon'] }}" type="image/x-icon" /> --}}
@@ -103,18 +103,14 @@
 @endif
 <!-- [ Header ] start -->
 <header class="main-header">
-    @if ($settings['topbar_status'] == 'on')
-        <div class="announcement bg-dark text-center p-2">
-            <p class="mb-0">{!! $settings['topbar_notification_msg'] !!}</p>
-        </div>
-    @endif
+
     @if ($settings['menubar_status'] == 'on')
         <div class="container">
             <nav class="navbar navbar-expand-md  default top-nav-collapse">
                 <div class="header-left">
-                    <a class="navbar-brand bg-transparent" href="#">
-                        <img src="{{ $logo . '/' . $settings['site_logo'] . '?' . time() }}" alt="logo">
-                    </a>
+                <a class="navbar-brand bg-transparent" href="#">
+                   <img src="{{ $sup_logo . '/' . $settings['4_light_logo'] . '?' . time() }}" alt="logo" style="width: 50px; height: auto;">
+                   </a>       
                 </div>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav">
@@ -194,11 +190,6 @@
                                 class="btn btn-outline-dark">{{ __('Live Demo') }} <i data-feather="play-circle"
                                     class="ms-2"></i></a>
                         @endif
-                        @if ($settings['home_buy_now_link'])
-                            <a href="{{ $settings['home_buy_now_link'] }}"
-                                class="btn btn-outline-dark">{{ __('Buy Now') }} <i data-feather="lock"
-                                    class="ms-2"></i></a>
-                        @endif
                     </div>
                 </div>
                 <div class="col-xxl-8 col-md-6">
@@ -241,11 +232,7 @@
                         <h2><b class="fw-bold">{!! $settings['feature_heading'] !!}</b></h2>
                     </div>
                     <p class="mb-3">{!! $settings['feature_description'] !!}</p>
-                    @if ($settings['feature_buy_now_link'])
-                        <a href="{{ $settings['feature_buy_now_link'] }}"
-                            class="btn btn-primary rounded-pill d-inline-flex align-items-center">{{ __('Buy Now') }}
-                            <i data-feather="lock" class="ms-2"></i></a>
-                    @endif
+                  
                 </div>
                 <div class="col-xxl-8">
                     <div class="row">
@@ -303,9 +290,7 @@
                                     </h2>
                                 </div>
                                 <p class="mb-3">{!! $value['other_featured_description'] !!}</p>
-                                <a href="{{ $value['other_feature_buy_now_link'] }}"
-                                    class="btn btn-primary rounded-pill d-inline-flex align-items-center">{{ __('Buy Now') }}
-                                    <i data-feather="lock" class="ms-2"></i></a>
+                               
                             </div>
                             <div class="col-lg-7 col-md-6 res-img">
                                 <div class="img-wrapper">
@@ -330,9 +315,7 @@
                                     </h2>
                                 </div>
                                 <p class="mb-3">{!! $value['other_featured_description'] !!}</p>
-                                <a href="{{ $value['other_feature_buy_now_link'] }}"
-                                    class="btn btn-primary rounded-pill d-inline-flex align-items-center">{{ __('Buy Now') }}
-                                    <i data-feather="lock" class="ms-2"></i></a>
+                              
                             </div>
                         </div>
                     @endif
@@ -386,11 +369,7 @@
                         <i data-feather="play-circle" class="ms-2"></i> </a>
                 @endif
 
-                @if ($settings['discover_buy_now_link'])
-                    <a href="{{ $settings['discover_buy_now_link'] }}"
-                        class="btn btn-primary rounded-pill">{{ __('Buy Now') }} <i data-feather="lock"
-                            class="ms-2"></i> </a>
-                @endif
+              
             </div>
         </div>
     </section>
@@ -659,7 +638,7 @@
             <div class="ftr-col cmp-detail">
                 <div class="footer-logo mb-3">
                     <a href="#">
-                        <img src="{{ $logo . '/' . $settings['site_logo'] . '?' . time() }}" alt="logo">
+                        <img src="{{ $sup_logo . '/' . $settings['4_light_logo'] . '?' . time() }}" alt="logo"style="width: 50px; height: auto;">
                     </a>
                 </div>
                 <p>
@@ -720,7 +699,7 @@
     <div class="border-top border-dark text-center p-2">
 
         &copy;{{ date(' Y') }}
-        {{ App\Models\Utility::getValByName('footer_text') ? App\Models\Utility::getValByName('footer_text') : config('app.name', 'HRMGo SaaS') }}
+        {{ App\Models\Utility::getValByName('footer_text') ? App\Models\Utility::getValByName('footer_text') : config('app.name', 'EMS SaaS') }}
 
     </div>
 </footer>
